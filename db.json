@@ -1,0 +1,22 @@
+{
+  "measurements": [
+    {
+      "id": "iEuOBYkU",
+      "timestamp": "01012020",
+      "latitude": "53",
+      "longitude": "30",
+      "country": "America",
+      "type": "1",
+      "result": "Good"
+    },
+    {
+      "id": "OkFaJHB2",
+      "timestamp": "01032020",
+      "latitude": "69",
+      "longitude": "96",
+      "country": "France",
+      "type": "2",
+      "result": "Not Good"
+    }
+  ]
+}
