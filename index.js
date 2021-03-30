@@ -51,13 +51,9 @@ app.use(morgan("dev"));
 
 app.use("/measurements", measurementsRouter);
 
-// app.get('/', (req, res) => {
-//     res.send("Welcome to the home page baby");
-// });
-
-// app.get('/measurements', (req,res) => {
-//     res.send("This is where we put the measurements");
-// });
+app.get('/', (req, res) => {
+    res.send("Welcome to the home page baby");
+});
 
 
 app.listen(port, () => {
