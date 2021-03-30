@@ -5,7 +5,7 @@
       "timestamp": "01012020",
       "latitude": "53",
       "longitude": "30",
-      "country": "America",
+      "country": "Vietnam",
       "type": "1",
       "result": "Good"
     },
@@ -17,15 +17,6 @@
       "country": "France",
       "type": "2",
       "result": "Not Good"
-    },
-    {
-      "id": "iEuOBYkU",
-      "timestamp": "01012020",
-      "latitude": "53",
-      "longitude": "30",
-      "country": "America",
-      "type": "1",
-      "result": "Good"
     }
   ]
 }

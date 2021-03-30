@@ -154,9 +154,49 @@ router.post("/", (req, res) => {
     }
 })
 
-router.get("/:id", (req, res) => {
+
+
+/**
+ * @swagger
+ * /measurements/{id}:
+ *  put:
+ *      summary: Update the measurement by the id
+ *      tags: [Measurements]
+ *      parameters:
+ *         - in: path
+ *           name: id
+ *           schema:
+ *              type: string
+ *           required: true
+ *           descriptrion: The measurement id
+ *      requestBody:
+ *          required: true
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                     $ref: '#components/schemas/Measurement'
+ *      responses:
+ *          200:
+ *              description: The measurement is updated
+ *              content:
+ *               application/json:
+ *                      schema:
+ *                         $ref: '#components/schemas/Measurement'
+ * 
+ *          404:
+ *              description: The measurement was not found
+ *          500:
+ *              description: Some error happened
+ * 
+ */
+
+router.put("/:id", (req, res) => {
     try{
-    req.app.db.get("measurements").find( {id: req.params.id}).assign(req.body).write();
+    req.app.db
+    .get("measurements")
+    .find( {id: req.params.id})
+    .assign(req.body)
+    .write();
 
     res.send(req.app.db.get("measurements").find( {id:req.params.id}));
     } catch(error){
@@ -165,6 +205,30 @@ router.get("/:id", (req, res) => {
 
 })
 
+
+/**
+ * @swagger
+ * /measurements/{id}:
+ *  delete:
+ *      summary: Delete the measurement by the id
+ *      tags: [Measurements]
+ *      parameters:
+ *         - in: path
+ *           name: id
+ *           schema:
+ *              type: string
+ *           required: true
+ *           descriptrion: The measurement id
+ * 
+ *      responses:
+ *          200:
+ *              description: The measurement was deleted 
+ *          404:
+ *              description: The measurement was not found
+ *          500:
+ *              description: Some error happened
+ * 
+ */
 router.delete("/:id", (req, res) => {
     req.app.db.get("measurements").remove({id: req.params.id}).write();
    
