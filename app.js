@@ -5,8 +5,6 @@ const low = require('lowdb');
 const swaggerUI = require ("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 
-
-
 const measurementsRouter = require("./routes/measurements");
 
 const port = process.env.port || 3000;
@@ -16,6 +14,7 @@ const adapter = new FileSync("db.json");
 const db = low(adapter);
 
 db.defaults( { measurements: [] }).write();
+
 
 const options = {
     definition: {
@@ -41,6 +40,11 @@ const specs = swaggerJsDoc(options);
 
 const app = express();
 
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/js', express.static(__dirname + 'public/js'))
+app.use('/img', express.static(__dirname + 'public/img'))
+
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs))
 
 app.db = db;
@@ -51,9 +55,11 @@ app.use(morgan("dev"));
 
 app.use("/measurements", measurementsRouter);
 
-app.get('/', (req, res) => {
-    res.send("Welcome to the home page baby");
+app.get('', (req, res) => {
+    res.sendFile(__dirname + '/view/index.html');
 });
+
+
 
 
 app.listen(port, () => {
