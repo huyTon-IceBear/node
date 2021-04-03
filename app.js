@@ -13,6 +13,8 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db.json");
 const db = low(adapter);
 
+
+
 db.defaults( { measurements: [] }).write();
 
 
@@ -44,6 +46,8 @@ app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/js', express.static(__dirname + 'public/js'))
 app.use('/img', express.static(__dirname + 'public/img'))
+app.use(express.static(__dirname + '/'));
+
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs))
 
@@ -59,7 +63,13 @@ app.get('', (req, res) => {
     res.sendFile(__dirname + '/view/index.html');
 });
 
+app.get('/table', (req, res) => {
+    res.sendFile(__dirname + '/measurement.html');
+});
 
+app.get('/test', (req, res) => {
+    res.sendFile(__dirname + '/myown.html');
+});
 
 
 app.listen(port, () => {
