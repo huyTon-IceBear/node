@@ -1,22 +1,118 @@
 {
   "measurements": [
     {
-      "id": "iEuOBYkU",
-      "timestamp": "01012020",
-      "latitude": "53",
-      "longitude": "30",
-      "country": "Vietnam",
-      "type": "1",
-      "result": "Good"
+      "id": "kM6r_Ort",
+      "app_id": "cosmintest",
+      "dev_id": "cosmin_dragino_test",
+      "hardware_serial": "1234561231244122",
+      "port": 1,
+      "counter": 3,
+      "payload_raw": "MjMxMjU1MzsxNjEzNDAxMDE0O0gyMC0wNTsxNTs0Ny4zMTg5MTQ7MTguOTM4ODczOwo=",
+      "payload_fields": {
+        "id": "2312553",
+        "latitude": "47.318914",
+        "longitude": "18.938873",
+        "result": "15",
+        "timestamp": "1613401014",
+        "type": "H20-05"
+      },
+      "metadata": {
+        "time": "2021-04-08T10:48:00.11925547Z",
+        "frequency": 868.1,
+        "modulation": "LORA",
+        "data_rate": "SF7BW125",
+        "coding_rate": "4/5",
+        "gateways": [
+          {
+            "gtw_id": "eui-a840411f56044150",
+            "timestamp": 3354381403,
+            "time": "2021-04-08T10:48:00.078877Z",
+            "channel": 0,
+            "rssi": -67,
+            "snr": 9,
+            "rf_chain": 0,
+            "latitude": 22.7,
+            "longitude": 114.24
+          }
+        ]
+      },
+      "downlink_url": "https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/cosmintest/post-measurements?key=ttn-account-v2.cVBMqT0u8H9nz-9OjVcVc6kxAEMO6HMnqK7CVAVnEA4"
     },
     {
-      "id": "OkFaJHB2",
-      "timestamp": "01032020",
-      "latitude": "69",
-      "longitude": "96",
-      "country": "France",
-      "type": "2",
-      "result": "Not Good"
+      "id": "ZHsjqcBf",
+      "app_id": "cosmintest",
+      "dev_id": "cosmin_dragino_test",
+      "hardware_serial": "1234561231244122",
+      "port": 1,
+      "counter": 57,
+      "payload_raw": "MTMyNTc0NDIzMTsxNjE0NzA0MDMwO0gyMC0wMjswLjk0OzQ2LjY2MzExNDsyMi4zMzI=",
+      "payload_fields": {
+        "id": "1325744231",
+        "latitude": "46.663114",
+        "longitude": "22.332",
+        "result": "0.94",
+        "timestamp": "1614704030",
+        "type": "H20-02"
+      },
+      "metadata": {
+        "time": "2021-04-08T09:33:03.559476722Z",
+        "frequency": 868.1,
+        "modulation": "LORA",
+        "data_rate": "SF7BW125",
+        "coding_rate": "4/5",
+        "gateways": [
+          {
+            "gtw_id": "eui-a840411f56044150",
+            "timestamp": 3152787511,
+            "time": "2021-04-08T09:33:03.517689Z",
+            "channel": 0,
+            "rssi": -58,
+            "snr": 9,
+            "rf_chain": 0,
+            "latitude": 22.7,
+            "longitude": 114.24
+          }
+        ]
+      },
+      "downlink_url": "https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/cosmintest/post-measurements?key=ttn-account-v2.cVBMqT0u8H9nz-9OjVcVc6kxAEMO6HMnqK7CVAVnEA4"
+    },
+    {
+      "id": "5q8n9lyC",
+      "app_id": "cosmintest",
+      "dev_id": "cosmin_dragino_test",
+      "hardware_serial": "1234561231244122",
+      "port": 1,
+      "counter": 60,
+      "payload_raw": "MTMyNTc0NDIzMTsxNjE0NzA0MDMwO0gyMC0wMjswLjk0OzQ2LjY2MzExNDsyMi4zMzI=",
+      "payload_fields": {
+        "id": "1325323",
+        "latitude": "69.663114",
+        "longitude": "11.332",
+        "result": "0.94",
+        "timestamp": "1614704030",
+        "type": "H20-03"
+      },
+      "metadata": {
+        "time": "2021-04-08T09:36:09.991797358Z",
+        "frequency": 868.1,
+        "modulation": "LORA",
+        "data_rate": "SF7BW125",
+        "coding_rate": "4/5",
+        "gateways": [
+          {
+            "gtw_id": "eui-a840411f56044150",
+            "timestamp": 3339221603,
+            "time": "2021-04-08T09:36:09.951714Z",
+            "channel": 0,
+            "rssi": -59,
+            "snr": 9,
+            "rf_chain": 0,
+            "latitude": 22.7,
+            "longitude": 114.24
+          }
+        ]
+      },
+      "downlink_url": "https://integrations.thethingsnetwork.org/ttn-eu/api/v2/down/cosmintest/post-measurements?key=ttn-account-v2.cVBMqT0u8H9nz-9OjVcVc6kxAEMO6HMnqK7CVAVnEA4"
     }
   ]
 }
